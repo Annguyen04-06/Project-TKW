@@ -1,0 +1,103 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Đảm bảo thẻ luôn có chiều cao bằng nhau */
+  animation: float 3s ease-in-out infinite;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-img img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.feature-img img:hover {
+  transform: scale(1.1);
+}
+
+.feature-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Giúp phần nội dung chiếm không gian còn lại */
+}
+
+.feature-content h3 {
+  font-size: 24px;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.feature-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: auto; /* Đẩy nút xuống dưới */
+}
+
+.btn-small {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #333;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+  margin-top: 20px; /* Cách ra khỏi đoạn mô tả */
+}
+
+.btn-small:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+}
+
+/* Để mỗi thẻ có thời gian animation khác nhau */
+.feature-card:nth-child(1) {
+  animation-delay: 1s;
+}
+.feature-card:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.feature-card:nth-child(3) {
+  animation-delay: 2s;
+}
+.feature-card:nth-child(4) {
+  animation-delay: 2.5s;
+}
+.feature-card:nth-child(5) {
+  animation-delay: 3s;
+}
+.feature-card:nth-child(6) {
+  animation-delay: 3.5s;
+}

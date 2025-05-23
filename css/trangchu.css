@@ -1,0 +1,397 @@
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 850px; /* Tăng chiều cao từ 500px lên 700px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Thay đổi màu chữ */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Giảm độ mờ của bóng chữ */
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Giảm độ mờ của bóng chữ */
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #333;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+}
+
+/* ===== HEADER STYLES ===== */
+/* Header hiện đại với gradient màu */
+.modern-header {
+  background: linear-gradient(135deg, #0064a4, #00a0e3);
+  color: white;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Container chứa toàn bộ nội dung header */
+.header-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: transparent; /* Loại bỏ background cũ */
+  box-shadow: none; /* Loại bỏ box-shadow cũ */
+  animation: none; /* Loại bỏ animation cũ */
+}
+
+/* Phần logo và tên thành phố */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Hình ảnh logo */
+.logo-img {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 2px;
+  transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng hover cho logo */
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Phần chữ bên cạnh logo */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tiêu đề chính */
+.logo-text h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Slogan */
+.slogan {
+  margin: 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Phần menu điều hướng */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+}
+
+/* Các liên kết trong menu */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hiệu ứng hover cho các liên kết */
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Hiệu ứng gạch chân khi hover */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* Nút đăng nhập đặc biệt */
+.login-btn {
+  background-color: #ff6b6b;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin-left: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Trạng thái active cho menu */
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* Ẩn nút toggle menu trên màn hình lớn */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Hiệu ứng khi cuộn trang */
+.scrolled {
+  padding: 5px 0;
+  background: rgba(0, 100, 164, 0.95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive cho màn hình trung bình */
+@media screen and (max-width: 992px) {
+  .header-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .main-nav ul {
+    gap: 2px;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive cho màn hình nhỏ và điện thoại */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+  }
+
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-container {
+    position: relative;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: linear-gradient(135deg, #0064a4, #00a0e3);
+    width: 200px;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-toggle:checked ~ .main-nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .nav-link {
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .login-btn {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+
+/* Điều chỉnh khoảng cách cho nội dung chính để không bị che bởi header cố định */
+body {
+  padding-top: 80px; /* Điều chỉnh giá trị này tùy theo chiều cao của header */
+}
+
+/* Thêm hiệu ứng mượt mà khi cuộn đến các section */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Xóa bỏ các style cũ không cần thiết */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 234, 0, 0.5);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #000; /* Đổi màu nền thành đen */
+  color: #fff; /* Màu chữ trắng */
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ */
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.footer-map {
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px; /* Thêm góc bo tròn */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ */
+}
+.section-title {
+  opacity: 0;
+  transition: all 2s ease;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180vh; /* Sử dụng 120vh để video chiếm toàn bộ chiều cao của viewport và hơn nữa */
+  object-fit: cover;
+  z-index: -1;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
