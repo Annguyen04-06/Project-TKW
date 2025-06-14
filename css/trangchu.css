@@ -122,6 +122,12 @@
   gap: 5px;
 }
 
+/* Đảm bảo menu hiển thị đúng trên tất cả thiết bị */
+.nav-container {
+  position: relative;
+  z-index: 1000;
+}
+
 /* Các liên kết trong menu */
 .nav-link {
   color: white;
@@ -201,6 +207,27 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .hero {
+    height: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    max-width: 80%;
+  }
+  
+  .btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}
+
 /* Responsive cho màn hình trung bình */
 @media screen and (max-width: 992px) {
   .header-container {
@@ -219,6 +246,24 @@
   .nav-link {
     padding: 8px 10px;
     font-size: 0.9rem;
+  }
+  
+  .hero {
+    height: 550px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-bottom: 25px;
+  }
+  
+  .btn {
+    padding: 10px 25px;
   }
 }
 
@@ -270,6 +315,54 @@
   .login-btn {
     margin-left: 0;
     margin-top: 5px;
+  }
+  
+  .hero {
+    height: 500px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    align-items: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 0.95rem;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    height: 450px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
   }
 }
 

@@ -11,6 +11,71 @@
   padding: 20px;
 }
 
+/* Responsive cho phần ẩm thực */
+@media screen and (max-width: 1200px) {
+  .amthuc-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .amthuc-content h3 {
+    font-size: 22px;
+  }
+  
+  .amthuc-content p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .amthuc-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .amthuc-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .amthuc-content {
+    padding: 15px;
+  }
+  
+  .amthuc-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .amthuc-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .amthuc-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .amthuc-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .amthuc-content h3 {
+    font-size: 22px;
+  }
+  
+  .amthuc-content p {
+    font-size: 16px;
+  }
+}
+
 .amthuc-card {
   background-color: #fff;
   border-radius: 10px;

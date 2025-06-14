@@ -1,0 +1,550 @@
+/* CSS cho trang đăng nhập/đăng ký */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-page {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.auth-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.auth-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  position: relative;
+  z-index: 10;
+  overflow-y: auto; /* Thêm thanh cuộn dọc khi cần */
+  max-height: 80vh; /* Giới hạn chiều cao tối đa là 80% chiều cao của viewport */
+  transition: all 0.3s ease;
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-logo img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.auth-logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0066cc;
+  margin-bottom: 5px;
+}
+
+.auth-logo .slogan {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-btn.active {
+  color: #0066cc;
+}
+
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #0066cc;
+  border-radius: 3px 3px 0 0;
+}
+
+.auth-form {
+  display: none;
+}
+
+.auth-form.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group label i {
+  margin-right: 8px;
+  color: #0066cc;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+  outline: none;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #999;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: #0066cc;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.remember-me,
+.terms-conditions {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input,
+.terms-conditions input {
+  margin-right: 8px;
+}
+
+.forgot-password {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #0066cc, #00aaff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(to right, #005bb8, #0099e6);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 102, 204, 0.4);
+}
+
+.auth-btn:active {
+  transform: translateY(0);
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-login p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 25%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.social-login p::before {
+  left: 0;
+}
+
+.social-login p::after {
+  right: 0;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.google {
+  background-color: #db4437;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #999;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: -350px;
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  transition: right 0.5s ease;
+  z-index: 1000;
+}
+
+.notification.show {
+  right: 20px;
+}
+
+.notification-icon {
+  margin-right: 15px;
+  font-size: 24px;
+  color: #28a745;
+}
+
+.notification-content p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+/* CSS cho cảnh báo lỗi */
+.input-error {
+  border: 2px solid #e74c3c !important;
+  background-color: rgba(231, 76, 60, 0.05);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.error-message i {
+  margin-right: 5px;
+}
+
+.notification.show {
+  right: 20px;
+}
+
+.notification-icon {
+  margin-right: 15px;
+  font-size: 24px;
+  color: #28a745;
+}
+
+.notification-content p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .auth-box {
+    max-width: 80%;
+    padding: 35px 25px;
+  }
+  
+  .auth-logo h1 {
+    font-size: 23px;
+  }
+  
+  .auth-logo img {
+    width: 75px;
+  }
+  
+  .form-group label {
+    font-size: 15px;
+  }
+  
+  .form-control {
+    padding: 12px 15px;
+  }
+  
+  .auth-btn {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-box {
+    max-width: 90%;
+    padding: 30px 20px;
+  }
+
+  .auth-logo h1 {
+    font-size: 22px;
+  }
+  
+  .auth-logo img {
+    width: 70px;
+  }
+  
+  .auth-tabs {
+    margin-bottom: 20px;
+  }
+  
+  .tab-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    padding: 10px 15px;
+  }
+  
+  .auth-btn {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .auth-box {
+    max-width: 95%;
+    padding: 25px 15px;
+    margin: 0 10px;
+  }
+
+  .auth-logo h1 {
+    font-size: 20px;
+  }
+  
+  .auth-logo img {
+    width: 60px;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .social-login p::before,
+  .social-login p::after {
+    width: 20%;
+  }
+  
+  .social-buttons {
+    gap: 10px;
+  }
+  
+  .social-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .tab-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+  }
+  
+  .form-control {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .auth-btn {
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  .form-options {
+    font-size: 13px;
+  }
+  
+  .forgot-password {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 375px) {
+  .auth-box {
+    padding: 20px 12px;
+  }
+  
+  .auth-logo h1 {
+    font-size: 18px;
+  }
+  
+  .auth-logo .slogan {
+    font-size: 12px;
+  }
+  
+  .tab-btn {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+  
+  .social-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}

@@ -59,6 +59,101 @@
   min-width: 300px;
 }
 
+/* Responsive cho phần giới thiệu */
+@media screen and (max-width: 1200px) {
+  .about-container {
+    max-width: 960px;
+    padding: 0 20px;
+    gap: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+  
+  .about-heading {
+    font-size: 1.6rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about-container {
+    max-width: 720px;
+    gap: 25px;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .about-heading {
+    font-size: 1.5rem;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    margin-bottom: 15px;
+  }
+  
+  .stat-item {
+    padding: 12px;
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .about-content {
+    width: 100%;
+  }
+  
+  .section-title {
+    margin-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-stats {
+    justify-content: center;
+  }
+  
+  .stat-item {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-title h2 {
+    font-size: 1.6rem;
+  }
+  
+  .about-heading {
+    font-size: 1.4rem;
+  }
+  
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .stat-item {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+}
+
 .about-heading {
   font-size: 1.8rem;
   color: #333;
@@ -503,7 +598,99 @@
   z-index: -1;
 }
 
+/* Hiệu ứng ảnh chạy từ phải sang trái */
+.danang-slider {
+  width: 100%;
+  overflow: hidden;
+  margin: 40px 0;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.danang-slider-container {
+  display: flex;
+  width: calc(300px * 12); /* 6 ảnh x 2 bản sao để tạo hiệu ứng vô hạn */
+  animation: slideLeft 30s linear infinite;
+}
+
+.danang-slider-container:hover {
+  animation-play-state: paused;
+}
+
+.danang-slide {
+  width: 300px;
+  height: 200px;
+  margin: 0 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.danang-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.danang-slide:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.danang-slide:hover img {
+  transform: scale(1.1);
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.danang-slide:hover .slide-caption {
+  transform: translateY(0);
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 6)); /* Di chuyển đúng 6 ảnh */
+  }
+}
+
 /* Responsive */
+@media (max-width: 768px) {
+  .danang-slider-container {
+    width: calc(250px * 12);
+  }
+  
+  .danang-slide {
+    width: 250px;
+    height: 170px;
+  }
+  
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 6));
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .about-section {
     flex-direction: column;

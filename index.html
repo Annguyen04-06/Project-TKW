@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/lienhe.css">
     <link rel="stylesheet" href="css/dangnhap.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="js/index.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--hieu ung xuat hienhien-->
   </head>
@@ -35,7 +36,7 @@
     <header class="modern-header" data-aos="fade-down" data-aos-duration="600">
       <div class="header-container">
         <div class="logo-container">
-          <img src="/images/trangchu/logo.png" alt="Logo Đà Nẵng" class="logo-img" />
+          <img src="images/trangchu/logo.png" alt="Logo Đà Nẵng" class="logo-img" />
           <div class="logo-text">
             <h1>THÀNH PHỐ ĐÀ NẴNG</h1>
             <p class="slogan">Thành phố đáng sống</p>
@@ -110,6 +111,63 @@
               src="images/gioi thieu/caurong.png"
               alt="Cầu Rồng Đà Nẵng"
             />
+          </div>
+        </div>
+        
+        <!-- Thêm hiệu ứng ảnh chạy từ phải sang trái -->
+        <div class="danang-slider" data-aos="fade-up" data-aos-delay="300">
+          <div class="danang-slider-container">
+            <!-- 6 ảnh đầu tiên -->
+            <div class="danang-slide">
+              <img src="images/dulich/banahill.png" alt="Bà Nà Hills">
+              <div class="slide-caption">Bà Nà Hills</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/dulich/sonTra.png" alt="Bán đảo Sơn Trà">
+              <div class="slide-caption">Bán đảo Sơn Trà</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/dulich/mykhe.png" alt="Biển Mỹ Khê">
+              <div class="slide-caption">Biển Mỹ Khê</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/dulich/nguHanhSon.png" alt="Ngũ Hành Sơn">
+              <div class="slide-caption">Ngũ Hành Sơn</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/dulich/baoTangCham.png" alt="Bảo tàng Chăm">
+              <div class="slide-caption">Bảo tàng Chăm</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/gioi thieu/caurong.png" alt="Cầu Rồng">
+              <div class="slide-caption">Cầu Rồng</div>
+            </div>
+            
+            <!-- Lặp lại 6 ảnh để tạo hiệu ứng vô hạn -->
+            <div class="danang-slide">
+              <img src="images/dulich/banahill.png" alt="Bà Nà Hills">
+              <div class="slide-caption">Bà Nà Hills</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/dulich/sonTra.png" alt="Bán đảo Sơn Trà">
+              <div class="slide-caption">Bán đảo Sơn Trà</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/dulich/mykhe.png" alt="Biển Mỹ Khê">
+              <div class="slide-caption">Biển Mỹ Khê</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/dulich/nguHanhSon.png" alt="Ngũ Hành Sơn">
+              <div class="slide-caption">Ngũ Hành Sơn</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/dulich/baoTangCham.png" alt="Bảo tàng Chăm">
+              <div class="slide-caption">Bảo tàng Chăm</div>
+            </div>
+            <div class="danang-slide">
+              <img src="images/gioi thieu/caurong.png" alt="Cầu Rồng">
+              <div class="slide-caption">Cầu Rồng</div>
+            </div>
           </div>
         </div>
       </section>
@@ -550,28 +608,61 @@
     <section id="thanh-vien">
       <div class="section-title" data-aos="fade-up">
         <h2>Thành Viên</h2>
+        <p>Đội ngũ phát triển website du lịch Đà Nẵng với đam mê và sáng tạo</p>
       </div>
       <div class="team-container">
         <div class="team-member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
             <img src="images/thanhvien/nguyenAn.png" alt="Thành viên 1" />
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
           </div>
           <div class="member-info">
             <h3>Nguyễn An</h3>
-            <p>Mssv:24ITB002</p>
-            <p>Email: ann.24itb@vku.udn.vn</p>
-            <p>SDT: 0902950421</p>
+            <div class="member-role">Web Developer</div>
+            <p class="member-contact"><i class="fas fa-id-card"></i> MSSV: 24ITB002</p>
+            <p class="member-contact"><i class="fas fa-envelope"></i> ann.24itb@vku.udn.vn</p>
+            <p class="member-contact"><i class="fas fa-phone"></i> 0902950421</p>
+            <div class="member-skills">
+              <div class="skill-title">Kỹ năng</div>
+              <div class="skill-bars">
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">UI/UX</span>
+                <span class="skill-tag">Responsive</span>
+              </div>
+            </div>
           </div>
         </div>
         <div class="team-member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
             <img src="images/thanhvien/huyLong.png" alt="Thành viên 2" />
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
           </div>
           <div class="member-info">
             <h3>Võ Huy Long</h3>
-            <p>Msssv:24ITB104</p>
-            <p>Email: longvh.24itb@vku.udn.vn</p>
-            <p>SDT: 0783237727</p>
+            <div class="member-role">Web Designer</div>
+            <p class="member-contact"><i class="fas fa-id-card"></i> MSSV: 24ITB104</p>
+            <p class="member-contact"><i class="fas fa-envelope"></i> longvh.24itb@vku.udn.vn</p>
+            <p class="member-contact"><i class="fas fa-phone"></i> 0783237727</p>
+            <div class="member-skills">
+              <div class="skill-title">Kỹ năng</div>
+              <div class="skill-bars">
+                <span class="skill-tag">Photoshop</span>
+                <span class="skill-tag">Illustrator</span>
+                <span class="skill-tag">UI Design</span>
+                <span class="skill-tag">Animation</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -662,9 +753,59 @@
 <script src="js/form.js"></script>
 
 <!-- Footer --> 
-    <footer> 
-      <p>&copy; 2024 Thành Phố Đà Nẵng. Tất cả các quyền được bảo lưu.</p> 
-      <iframe class="footer-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.822307998915!2d108.22017931528862!3d16.06707898887669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142178f1c6b5d5b%3A0x7b7b7b7b7b7b7b7b!2sDa%20Nang%2C%20Vietnam!5e0!3m2!1sen!2s!4v1633072800000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Về Đà Nẵng</h3>
+          <ul class="footer-links">
+            <li><a href="#gioi-thieu"><i class="fas fa-angle-right"></i> Giới thiệu</a></li>
+            <li><a href="#du-lich"><i class="fas fa-angle-right"></i> Địa điểm du lịch</a></li>
+            <li><a href="#am-thuc-section"><i class="fas fa-angle-right"></i> Ẩm thực</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Lịch sử</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Văn hóa</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Dịch vụ</h3>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fas fa-angle-right"></i> Đặt tour</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Khách sạn</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Nhà hàng</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Phương tiện</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Hướng dẫn viên</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column footer-contact">
+          <h3>Liên hệ</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 108 Bạch Đằng, Hải Châu, Đà Nẵng</p>
+          <p><i class="fas fa-phone"></i> 0903 550 111</p>
+          <p><i class="fas fa-envelope"></i> info@danangtravel.com</p>
+          <p><i class="fas fa-clock"></i> Thứ Hai - Thứ Sáu: 8:00 - 17:30</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column footer-newsletter">
+          <h3>Bản tin</h3>
+          <p>Đăng ký nhận thông tin mới nhất về du lịch Đà Nẵng, sự kiện và ưu đãi đặc biệt.</p>
+          <div class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Email của bạn">
+            <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+          <iframe class="footer-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.822307998915!2d108.22017931528862!3d16.06707898887669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142178f1c6b5d5b%3A0x7b7b7b7b7b7b7b7b!2sDa%20Nang%2C%20Vietnam!5e0!3m2!1sen!2s!4v1633072800000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Thành Phố Đà Nẵng. Tất cả các quyền được bảo lưu. | Thiết kế bởi <a href="#thanh-vien">Nhóm 5</a></p>
+      </div>
     </footer>
 
   
